@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>ExportJavaToHtml.java</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {color: #ffffff; background-color: #121e31; font-family: Monospaced}
+pre {color: #ffffff; background-color: #121e31; font-family: Monospaced}
+table {color: #ffffff; background-color: #121e31; font-family: Monospaced}
+.string {color: #e2ce00}
+.number {color: #eddd3d}
+.ST2 {color: #098a18}
+.literal {color: #f8bb00}
+.ST0 {color: #ec8e01}
+.ST1 {color: #428bdd; font-family: Monospaced; font-style: italic}
+-->
+</style>
+</head>
+<body>
+<table width="100%"><tr><td align="center">C:\Users\jacob\Documents\NetBeansProjects\exportJavaToHtml\src\exportjavatohtml\ExportJavaToHtml.java</td></tr></table>
+<pre>
+
+<span class="literal">import</span> java.util.Scanner;
+
+<span class="literal">public</span> <span class="literal">class</span> DivisionQuiz {
+
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">void</span> main(String[] <span class="ST0">args</span>) {
+        <span class="ST1">// 1. Generate two random single-digit integers</span>
+        <span class="literal">int</span> number1 = (<span class="literal">int</span>) (Math.random() * <span class="number">100</span>);
+        <span class="literal">int</span> number2 = (<span class="literal">int</span>) (Math.random() * <span class="number">100</span>);
+        <span class="literal">int</span> number3 = (<span class="literal">int</span>) (Math.random() * <span class="number">100</span>);
+        <span class="literal">int</span> number4 = (<span class="literal">int</span>) (Math.random() * <span class="number">100</span>);
+
+        <span class="ST1">// 2. If number1 &lt; number2, swap number1 with number2</span>
+        <span class="literal">if</span> (number1 &lt; number2) {
+            <span class="literal">int</span> temp = number1;
+            number1 = number2;
+            number2 = temp;
+        }
+        <span class="literal">if</span> (number4 &lt; number3) {
+            <span class="literal">int</span> temp2 = number3;
+            number3 = number4;
+            number4 = temp2;
+        }
+        
+
+        <span class="ST1">// 3. Prompt the student to answer &quot;what is number1 − number2?&quot;</span>
+        System.<span class="ST2">out</span>.print(<span class="string">&quot;</span><span class="string">What is </span><span class="string">&quot;</span> + number1 + <span class="string">&quot;</span><span class="string"> / </span><span class="string">&quot;</span> + number2 + <span class="string">&quot;</span><span class="string">? </span><span class="string">&quot;</span>);
+        Scanner input = <span class="literal">new</span> Scanner(System.<span class="ST2">in</span>);
+        <span class="literal">int</span> answer = input.nextInt();
+        System.<span class="ST2">out</span>.print(<span class="string">&quot;</span><span class="string">What is </span><span class="string">&quot;</span> + number3 + <span class="string">&quot;</span><span class="string"> % </span><span class="string">&quot;</span> + number4 + <span class="string">&quot;</span><span class="string">? </span><span class="string">&quot;</span>);
+        <span class="literal">int</span> answer2 = input.nextInt();
+
+        <span class="ST1">// 4. Grade the answer and display the result</span>
+        <span class="literal">if</span> (number1 / number2 == answer) {
+            System.<span class="ST2">out</span>.println(<span class="string">&quot;</span><span class="string">You are correct!</span><span class="string">&quot;</span>);
+        } <span class="literal">else</span> {
+            System.<span class="ST2">out</span>.println(<span class="string">&quot;</span><span class="string">Your answer is wrong.</span><span class="string">&quot;</span>);
+            System.<span class="ST2">out</span>.println(number1 + <span class="string">&quot;</span><span class="string"> / </span><span class="string">&quot;</span> + number2
+                    + <span class="string">&quot;</span><span class="string"> should be </span><span class="string">&quot;</span> + (number1 / number2));
+        }
+        <span class="literal">if</span> (number3 % number4 == answer2) {
+            System.<span class="ST2">out</span>.println(<span class="string">&quot;</span><span class="string">You are correct!</span><span class="string">&quot;</span>);
+        } <span class="literal">else</span> {
+            System.<span class="ST2">out</span>.println(<span class="string">&quot;</span><span class="string">Your answer is wrong.</span><span class="string">&quot;</span>);
+            System.<span class="ST2">out</span>.println(number3 + <span class="string">&quot;</span><span class="string"> % </span><span class="string">&quot;</span> + number4
+                    + <span class="string">&quot;</span><span class="string"> should be </span><span class="string">&quot;</span> + (number3 % number4));
+        }
+    }
+}
+
+</pre></body>
+</html>
