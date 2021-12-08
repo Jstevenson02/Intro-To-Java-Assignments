@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>JavaApplication1.java</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {color: #000000; background-color: #ffffff; font-family: Monospaced}
+pre {color: #000000; background-color: #ffffff; font-family: Monospaced}
+table {color: #000000; background-color: #e9e8e2; font-family: Monospaced}
+.ST0 {font-family: Monospaced; font-weight: bold}
+.comment {color: #969696}
+.ST1 {font-family: Monospaced; font-weight: bold; font-style: italic}
+.ST2 {color: #009900; font-family: Monospaced; font-style: italic}
+.literal {color: #0000e6}
+.string {color: #ce7b00}
+-->
+</style>
+</head>
+<body>
+<table width="100%"><tr><td align="center">C:\Users\jacob\OneDrive\Documents\NetBeansProjects\JavaApplication1\src\javaapplication1\JavaApplication1.java</td></tr></table>
+<pre>
+<span class="literal">import</span> java.util.Scanner;
+
+<span class="literal">public</span> <span class="literal">class</span> <span class="ST0">GeometryPointLineSegment</span> {
+        <span class="literal">public</span> <span class="literal">static</span> <span class="literal">void</span> <span class="ST1">main</span>(String[] args) {
+                Scanner input = <span class="literal">new</span> Scanner(System.<span class="ST2">in</span>); <span class="comment">// Create Scanner object</span>
+
+                <span class="comment">// Prompt the user to enter the three points for p0, p1, and p2x</span>
+                System.<span class="ST2">out</span>.print(<span class="string">&quot;</span><span class="string">Enter three points for p0, p1, and p2: </span><span class="string">&quot;</span>);
+                <span class="literal">double</span> x0 = input.nextDouble(); 
+                <span class="literal">double</span> y0 = input.nextDouble();
+                <span class="literal">double</span> x1 = input.nextDouble(); 
+                <span class="literal">double</span> y1 = input.nextDouble();
+                <span class="literal">double</span> x2 = input.nextDouble(); 
+                <span class="literal">double</span> y2 = input.nextDouble(); 
+
+                <span class="comment">// Calculate point position</span>
+                <span class="literal">double</span> position = (x1 - x0) * (y2 - y0) - (x2 - x0) * (y1 - y0);
+
+        <span class="comment">// Display whether it falls on the line between p0 and p1 </span>
+                <span class="comment">// Display where to the left or right the point lies</span>
+                System.<span class="ST2">out</span>.print(<span class="string">&quot;</span><span class="string">(</span><span class="string">&quot;</span> + x2 + <span class="string">&quot;</span><span class="string">, </span><span class="string">&quot;</span> + y2 + <span class="string">&quot;</span><span class="string">) is on the </span><span class="string">&quot;</span>);
+                <span class="literal">if</span> (position &gt; 0)
+                        System.<span class="ST2">out</span>.print(<span class="string">&quot;</span><span class="string">left side of the </span><span class="string">&quot;</span>); 
+                <span class="literal">if</span> (position &lt; 0)
+                        System.<span class="ST2">out</span>.print(<span class="string">&quot;</span><span class="string">right side of the </span><span class="string">&quot;</span>);
+                System.<span class="ST2">out</span>.println(<span class="string">&quot;</span><span class="string">line from (</span><span class="string">&quot;</span> + x0 + <span class="string">&quot;</span><span class="string">, </span><span class="string">&quot;</span> + y0 + 
+                        <span class="string">&quot;</span><span class="string">) to (</span><span class="string">&quot;</span> + x1 + <span class="string">&quot;</span><span class="string">, </span><span class="string">&quot;</span> + y1 + <span class="string">&quot;</span><span class="string">)</span><span class="string">&quot;</span>);
+                System.<span class="ST2">out</span>.println(position);
+        }
+}
+</pre></body>
+</html>
