@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>NewClass.java</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {color: #ffffff; background-color: #121e31; font-family: Monospaced}
+pre {color: #ffffff; background-color: #121e31; font-family: Monospaced}
+table {color: #ffffff; background-color: #121e31; font-family: Monospaced}
+.string {color: #e2ce00}
+.number {color: #eddd3d}
+.ST2 {color: #808080}
+.ST0 {color: #098a18}
+.literal {color: #f8bb00}
+.ST1 {color: #ec8e01}
+-->
+</style>
+</head>
+<body>
+<table width="100%"><tr><td align="center">C:\Users\jacob\Documents\schoolRepos\Java\Exam2\JavaApplication6\src\NewClass.java</td></tr></table>
+<pre>
+<span class="literal">import</span> java.util.Date;
+<span class="literal">import</span> java.util.Scanner;
+
+<span class="literal">public</span> <span class="literal">class</span> Driver {
+
+    <span class="literal">public</span> <span class="literal">static</span> Dog[] create3Dogs()
+    {
+        Scanner scan = <span class="literal">new</span> Scanner(System.<span class="ST0">in</span>);
+        Dog[] ar = <span class="literal">new</span> Dog[<span class="number">3</span>];
+        <span class="literal">for</span> (<span class="literal">int</span> i=<span class="number">0</span>; i &lt;<span class="number">3</span>; ++i)
+        {
+            System.<span class="ST0">out</span>.println(<span class="string">&quot;</span><span class="string">enter name, species, year, month, day for dog: </span><span class="string">&quot;</span>);
+            ar[i] = <span class="literal">new</span> Dog (scan.next(), scan.next(), <span class="literal">new</span> Date(scan.nextInt(), scan.nextInt(), scan.nextInt()));
+        }
+        <span class="literal">return</span> ar;
+    }
+    <span class="literal">private</span> <span class="literal">static</span> <span class="literal">void</span> printDogs(Dog[] <span class="ST1">ar</span>) {
+        <span class="literal">for</span> (Dog d: <span class="ST1">ar</span>)
+        {
+            System.<span class="ST0">out</span>.println(d);
+        }
+        
+    }
+    <span class="literal">private</span> <span class="literal">static</span> <span class="literal">void</span> <span class="ST2">sortDogsByName</span>(Dog[] <span class="ST1">ar</span>) 
+    {
+        <span class="literal">for</span> (<span class="literal">int</span> i=<span class="number">0</span>; i &lt; <span class="ST1">ar</span>.<span class="ST0">length</span>-<span class="number">1</span>; ++i)
+        {
+            <span class="literal">for</span> (<span class="literal">int</span> j = i+<span class="number">1</span>; j &lt; <span class="ST1">ar</span>.<span class="ST0">length</span>; ++j)
+            {
+                <span class="literal">if</span> (<span class="ST1">ar</span>[i].getName().compareToIgnoreCase(<span class="ST1">ar</span>[j].getName()) &gt; <span class="number">0</span>)
+                {
+                    Dog temp = <span class="ST1">ar</span>[i];
+                    <span class="ST1">ar</span>[i] = <span class="ST1">ar</span>[j];
+                    <span class="ST1">ar</span>[j] = temp;
+                }
+            }
+        }
+    }
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">void</span> main(String[] <span class="ST1">args</span>) {
+
+        Dog[] ar = Driver.create3Dogs();
+        Driver.printDogs(ar);
+    }
+}
+
+</pre></body>
+</html>
