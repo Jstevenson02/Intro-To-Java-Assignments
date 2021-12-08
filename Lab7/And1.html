@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>ExportJavaToHtml.java</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {color: #ffffff; background-color: #121e31; font-family: Monospaced}
+pre {color: #ffffff; background-color: #121e31; font-family: Monospaced}
+table {color: #ffffff; background-color: #121e31; font-family: Monospaced}
+.string {color: #e2ce00}
+.ST4 {color: #e2ce00; font-family: Monospaced; font-weight: bold}
+.number {color: #eddd3d}
+.ST3 {color: #098a18}
+.literal {color: #f8bb00}
+.ST1 {color: #428bdd; font-family: Monospaced; font-weight: bold}
+.ST0 {color: #428bdd; font-family: Monospaced; font-style: italic}
+.ST2 {color: #ec8e01}
+-->
+</style>
+</head>
+<body>
+<table width="100%"><tr><td align="center">C:\Users\jacob\Documents\NetBeansProjects\exportJavaToHtml\src\exportjavatohtml\ExportJavaToHtml.java</td></tr></table>
+<pre>
+<span class="ST0">/*</span>
+<span class="ST0"> * To change this license header, choose License Headers in Project Properties.</span>
+<span class="ST0"> * To change this template file, choose Tools | Templates</span>
+<span class="ST0"> * and open the template in the editor.</span>
+<span class="ST0"> */</span>
+<span class="literal">package</span> lab7_stevenson;
+<span class="literal">import</span> java.util.Scanner;
+<span class="ST0">/**</span>
+<span class="ST0"> *</span>
+<span class="ST0"> * </span><span class="ST1">@author</span> <span class="ST0">ar114</span>
+ <span class="ST0">*/</span>
+<span class="literal">public</span> <span class="literal">class</span> And1 {
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">void</span> main(String[] <span class="ST2">args</span>) {
+        System.<span class="ST3">out</span>.println(<span class="string">&quot;</span><span class="string">Please enter a number between 0 and 10: </span><span class="string">&quot;</span>);
+        <span class="literal">int</span> number = <span class="literal">new</span> Scanner(System.<span class="ST3">in</span>).nextInt();
+        
+        <span class="literal">if</span> (number &gt;= <span class="number">0</span> &amp;&amp; number &lt;= <span class="number">10</span>)
+            System.<span class="ST3">out</span>.println(<span class="string">&quot;</span><span class="ST4">\n</span><span class="string">thank you for entering a number </span><span class="string">&quot;</span> + number);
+        <span class="literal">else</span> 
+            System.<span class="ST3">out</span>.println(<span class="string">&quot;</span><span class="ST4">\n</span><span class="string">&quot;</span> + number + <span class="string">&quot;</span><span class="string"> is not between 0 and 10! What&#39;s wrong with your man?</span><span class="string">&quot;</span>);
+    }
+}
+
+</pre></body>
+</html>
